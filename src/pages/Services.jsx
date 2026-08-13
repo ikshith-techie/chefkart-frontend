@@ -54,7 +54,7 @@ const Services = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await fetch('http://localhost:5000/ser/get');
+        const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/ser/get`);
         if (!response.ok) throw new Error('Failed to fetch services');
         const data = await response.json();
         if (Array.isArray(data) && data.length > 0) {

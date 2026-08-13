@@ -108,7 +108,7 @@ const Chefs = () => {
   useEffect(() => {
     const fetchChefs = async () => {
       try {
-        const response = await fetch('http://localhost:5000/chef/get');
+        const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/chef/get`);
         if (!response.ok) throw new Error('Failed to fetch chefs');
         const data = await response.json();
         const chefsArray = data.data || data.chefs || data || [];
