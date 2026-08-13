@@ -1,8 +1,0 @@
-services:
-  - type: static
-    name: chefkart-frontend
-    buildCommand: npm install && npm run build
-    staticPublishPath: dist
-    envVars:
-      - key: VITE_API_URL
-        value: https://chefkart-backend-j51k.onrender.com
