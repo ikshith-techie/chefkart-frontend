@@ -7,4 +7,4 @@ services:
     staticPublishPath: dist
     envVars:
       - key: VITE_API_URL
-        sync: false
+        value: https://chefkart-backend-j51k.onrender.com
